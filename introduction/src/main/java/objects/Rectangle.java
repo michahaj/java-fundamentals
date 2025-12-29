@@ -1,9 +1,9 @@
 package objects;
 
 public class Rectangle {
-    private double width;
-    private double height;
-    private int sides = 4;
+    protected double width;
+    protected double height;
+    protected int sides = 4;
 
     // Default constructor. When no defined, there's default constructor with empty body provided.
     public Rectangle() {
@@ -17,7 +17,11 @@ public class Rectangle {
         setWidth(width);
     }
 
-    public double calculatePerimeter(double width, double height) {
+    public double calculatePerimeter() {
+        return (2 * width) * (2 * height);
+    }
+
+    public static double calculatePerimeter(double width, double height) {
         return (2 * width) * (2 * height);
     }
 
