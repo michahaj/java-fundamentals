@@ -30,6 +30,12 @@ public class CollectionsDemo {
         fruits.add("orange");
         fruits.add("apple");
 
+        fruits.forEach(f -> System.out.println(f));
+
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+
         fruits.set(2, "grape");
         fruits.remove("apple"); // remove first found
         String fruit = fruits.remove(fruits.size() - 1);
@@ -46,6 +52,8 @@ public class CollectionsDemo {
         fruits.add("banana");
         fruits.add("lemon");
         fruits.add("orange");
+
+        fruits.forEach(System.out::println);
 
         var removed =  fruits.remove();
         System.out.println(removed);
